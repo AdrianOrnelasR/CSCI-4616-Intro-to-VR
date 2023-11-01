@@ -7,9 +7,9 @@ public class gunScript : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float bulletForce = 200f;
     [SerializeField] private Vector3 bulletOffset;
-    [SerializeField] private int maxBullets = 30; // Adjust as needed
+    [SerializeField] private int maxBullets = 30; 
 
-    private int currentBulletCount;
+    public int currentBulletCount;
     private Transform bulletSpawnPoint;
     private spaceShooterUI SpaceshooterUI;
 
@@ -18,10 +18,10 @@ public class gunScript : MonoBehaviour
         SpaceshooterUI = Camera.main.GetComponent<spaceShooterUI>();
 
         currentBulletCount = maxBullets;
-        bulletSpawnPoint = transform.Find("bulletSpawn"); // Use the actual name you've given to the spawn point
+        bulletSpawnPoint = transform.Find("bulletSpawn");
         if (bulletSpawnPoint == null)
         {
-            Debug.LogError("BulletSpawnPoint not found or incorrectly named!");
+            Debug.LogError("BulletSpawnPoint not found!");
         }
         else
         {
@@ -46,23 +46,10 @@ public class gunScript : MonoBehaviour
         bulletRigidbody.AddForce(bulletSpawnPoint.forward * bulletForce);
 
         currentBulletCount--;
+        SpaceshooterUI.bulletIncrement(currentBulletCount);
+        SpaceshooterUI.UpdateScoreText();
     }
 
-    // void OnCollisionEnter(Collision collision)
-    // {
-    //     // if (collision.gameObject.CompareTag("target"))
-    //     if(collision.gameObject.name=="Cube")
-    //     {
-    //         Debug.Log("Target hit!");
-    //         Destroy(collision.gameObject);
-    //         // The bullet hit a target with the "target" tag.
-    //         ObjectHit(collision.gameObject);
-    //     }
-    // }
 
-    // void ObjectHit(GameObject target)
-    // {
-    //     // Handle scoring logic here
-    //     SpaceshooterUI.IncrementHitCount();
-    // }
+
 }

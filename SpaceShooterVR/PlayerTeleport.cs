@@ -7,7 +7,6 @@ public class PlayerTeleport : MonoBehaviour
     // rather have functions to change values and keep them values rather then having the functions them self change them 
     [SerializeField] private LayerMask tpLayer;
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) {

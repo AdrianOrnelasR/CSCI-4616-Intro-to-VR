@@ -7,26 +7,38 @@ using TMPro;
 public class spaceShooterUI : MonoBehaviour
 {
     // [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TMP_Text bulletCountText;
     private TMP_Text scoreText;
-    private int hits = 0;
+    public int hits;
+    public int currentBulletCount;
 
     void Start()
     {
+        hits = 0;
+        currentBulletCount = 0;
         scoreText = GetComponentInChildren<TMP_Text>();
         UpdateScoreText();
     }
 
+   
+
     public void IncrementHitCount()
     {
-        hits+=1;
+        hits = hits + 1;
         Debug.Log("Hits: " + hits);
         UpdateScoreText();
     }
 
-    private void UpdateScoreText()
+    public void UpdateScoreText()
     {
-        scoreText.text = "Score: " + hits.ToString();
+        // scoreText.text = "# Score: " + hits.ToString();
+        // currentBulletCount = gs.bulletLeft();
+        scoreText.text = "Score: " + hits + "\nBullets: " + currentBulletCount;
+    
     }
 
-    // Other variables and methods...
+    public void bulletIncrement(int curr){
+        currentBulletCount = curr;
+    }
+
 }
