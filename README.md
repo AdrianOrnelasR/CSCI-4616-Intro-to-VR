@@ -2,9 +2,12 @@
 **Adrian Ornelas Ruvalcaba**  
 
 Sources for VR Ball Toss Assignment
-* https://kaylousberg.itch.io/kaykit-dungeon-remastered
-* https://kaylousberg.itch.io/kaykit-adventurers 
-* https://kaylousberg.itch.io/kaykit-dungeon-remastered 
-* https://kaylousberg.itch.io/kay-kit-mini-game-variety-pack 
-* https://screamingbrainstudios.itch.io/tiny-texture-pack
-* https://kaylousberg.itch.io/kaykit-skeletons
+* https://essssam.itch.io/3d-leap-land
+* https://kaylousberg.itch.io/city-builder-bits
+* https://kaylousberg.itch.io/halloween-bits
+* https://kaylousberg.itch.io/prototype-bits
+* https://kaylousberg.itch.io/space-base-bits
+* https://maxparata.itch.io/voxel-guns-n-riffles-monogon
+* https://maxparata.itch.io/voxelspacecolony
+* https://assetstore.unity.com/packages/2d/textures-materials/sky/starfield-skybox-92717
+  
